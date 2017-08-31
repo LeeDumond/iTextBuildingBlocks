@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using iText.Kernel.Font;
 using iText.Kernel.Pdf;
 using iText.Layout;
@@ -7,9 +6,9 @@ using iText.Layout.Element;
 
 namespace Chapter01
 {
-    public class C01E02_Text_Paragraph_Cardo
+    public class C01E03_Test_Paragraph_NoCardo
     {
-        private const string DEST = @"C:\Projects2\iTextBuildingBlocks\results\chapter01\text_paragraph_cardo.pdf";
+        private const string DEST = @"C:\Projects2\iTextBuildingBlocks\results\chapter01\text_paragraph_no_cardo.pdf";
 
         private const string REGULAR = @"C:\Projects2\iTextBuildingBlocks\resources\fonts\Cardo-Regular.ttf";
         private const string BOLD = @"C:\Projects2\iTextBuildingBlocks\resources\fonts\Cardo-Bold.ttf";
@@ -33,10 +32,10 @@ namespace Chapter01
             // Initialize document
             Document document = new Document(pdf);
 
-            // Add content
-            PdfFont font = PdfFontFactory.CreateFont(REGULAR, true);
-            PdfFont bold = PdfFontFactory.CreateFont(BOLD, true);
-            PdfFont italic = PdfFontFactory.CreateFont(ITALIC, true);
+            // Add content: the fonts aren't embedded! Don't do this!
+            PdfFont font = PdfFontFactory.CreateFont(REGULAR);
+            PdfFont bold = PdfFontFactory.CreateFont(BOLD);
+            PdfFont italic = PdfFontFactory.CreateFont(ITALIC);
             Text title = new Text("The Strange Case of Dr. Jekyll and Mr. Hyde").SetFont(bold);
             Text author = new Text("Robert Louis Stevenson").SetFont(font);
             Paragraph p = new Paragraph().SetFont(italic).Add(title).Add(" by ").Add(author);

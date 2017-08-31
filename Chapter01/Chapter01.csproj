@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter01.C01E02_Text_Paragraph_Cardo</StartupObject>
+    <StartupObject>Chapter01.C01E06_Czech_Russian_Korean_Unicode</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -68,6 +68,10 @@
   <ItemGroup>
     <Compile Include="C01E01_Text_Paragraph.cs" />
     <Compile Include="C01E02_Text_Paragraph_Cardo.cs" />
+    <Compile Include="C01E03_Test_Paragraph_NoCardo.cs" />
+    <Compile Include="C01E04_Czech_Russian_Korean_Wrong.cs" />
+    <Compile Include="C01E05_Czech_Russian_Korean_Right.cs" />
+    <Compile Include="C01E06_Czech_Russian_Korean_Unicode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
