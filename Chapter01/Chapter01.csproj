@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter01.C01E09_ColorRendering</StartupObject>
+    <StartupObject>Chapter01.C01E10_ReusingStyles</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -75,6 +75,7 @@
     <Compile Include="C01E07_FontSize.cs" />
     <Compile Include="C01E08_BoldItalic.cs" />
     <Compile Include="C01E09_ColorRendering.cs" />
+    <Compile Include="C01E10_ReusingStyles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
