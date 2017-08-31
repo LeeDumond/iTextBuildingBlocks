@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter02.C02E02_CanvasCut</StartupObject>
+    <StartupObject>Chapter02.C02E03_CanvasRepeat</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="C02E01_CanvasExample.cs" />
     <Compile Include="C02E02_CanvasCut.cs" />
+    <Compile Include="C02E03_CanvasRepeat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
