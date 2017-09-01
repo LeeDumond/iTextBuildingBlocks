@@ -4,12 +4,13 @@ using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Canvas;
 using iText.Layout;
 using iText.Layout.Element;
+using iTextBuildingBlocks;
 
 namespace Chapter01
 {
     public class C01E09_ColorRendering
     {
-private const string DEST = @"C:\Projects2\iTextBuildingBlocks\results\chapter01\color_rendermode.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter01\color_rendermode.pdf";
 
         public static void Main(string[] args)
         {

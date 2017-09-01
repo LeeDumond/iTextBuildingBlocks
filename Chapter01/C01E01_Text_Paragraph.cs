@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net.Mime;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 using iText.IO.Font;
 using iText.Kernel.Font;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
+using iTextBuildingBlocks;
 
 namespace Chapter01
 {
     public class C01E01_Text_Paragraph
     {
-        private const string DEST = @"C:\Projects2\iTextBuildingBlocks\results\chapter01\text_paragraph.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter01\text_paragraph.pdf";
 
         public static void Main(string[] args)
         {

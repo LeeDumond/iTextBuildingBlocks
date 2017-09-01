@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using iText.IO.Font;
 using iText.Kernel.Font;
 using iText.Kernel.Pdf;
@@ -7,13 +6,14 @@ using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Hyphenation;
 using iText.Layout.Properties;
+using iTextBuildingBlocks;
 
 namespace Chapter02
 {
     public class C02E06_JekyllHydeV3
     {
-        private const string SRC = @"C:\Projects2\iTextBuildingBlocks\resources\txt\jekyll_hyde.txt";
-        private const string DEST = @"C:\Projects2\iTextBuildingBlocks\results\chapter02\jekyll_hyde_v3.pdf";
+        private static readonly string SRC = $@"{Paths.TextResourcesPath}\jekyll_hyde.txt";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter02\jekyll_hyde_v3.pdf";
 
         public static void Main(string[] args)
         {

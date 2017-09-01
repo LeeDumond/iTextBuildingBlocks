@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using iText.IO.Font;
 using iText.Kernel.Font;
 using iText.Kernel.Geom;
@@ -9,12 +8,13 @@ using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
 using iText.Layout.Renderer;
+using iTextBuildingBlocks;
 
 namespace Chapter02
 {
     public class C02E03_CanvasRepeat
     {
-        private const string DEST = @"C:\Projects2\iTextBuildingBlocks\results\chapter02\canvas_repeat.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter02\canvas_repeat.pdf";
 
         public static void Main(string[] args)
         {

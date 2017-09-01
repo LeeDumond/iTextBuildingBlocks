@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 using iText.IO.Font;
 using iText.Kernel.Font;
 using iText.Kernel.Geom;
@@ -11,12 +6,13 @@ using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Canvas;
 using iText.Layout;
 using iText.Layout.Element;
+using iTextBuildingBlocks;
 
 namespace Chapter02
 {
     public class C02E01_CanvasExample
     {
-        private const string DEST = @"C:\Projects2\iTextBuildingBlocks\results\chapter02\canvas_example.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter02\canvas_example.pdf";
 
         public static void Main(string[] args)
         {

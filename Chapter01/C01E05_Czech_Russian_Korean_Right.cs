@@ -4,16 +4,16 @@ using iText.Kernel.Font;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
+using iTextBuildingBlocks;
 
 namespace Chapter01
 {
     public class C01E05_Czech_Russian_Korean_Right
     {
-        private const string DEST =
-            @"C:\Projects2\iTextBuildingBlocks\results\chapter01\czech_russian_korean.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter01\czech_russian_korean.pdf";
 
-        private const string FONT = @"C:\Projects2\iTextBuildingBlocks\resources\fonts\FreeSans.ttf";
-        private const string HCRBATANG = @"C:\Projects2\iTextBuildingBlocks\resources\fonts\HANBatang.ttf";
+        private static readonly string FONT = $@"{Paths.FontResourcesPath}\FreeSans.ttf";
+        private static readonly string HCRBATANG = $@"{Paths.FontResourcesPath}\HANBatang.ttf";
 
         private const string CZECH = "Podivn\u00fd p\u0159\u00edpad Dr. Jekylla a pana Hyda";
 

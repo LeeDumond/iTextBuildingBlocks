@@ -5,12 +5,13 @@ using iText.Kernel.Font;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
+using iTextBuildingBlocks;
 
 namespace Chapter01
 {
     public class C01E10_ReusingStyles
     {
-        private const string DEST = @"C:\Projects2\iTextBuildingBlocks\results\chapter01\style_example.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter01\style_example.pdf";
 
         public static void Main(string[] args)
         {

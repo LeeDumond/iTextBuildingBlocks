@@ -1,15 +1,15 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
+using iTextBuildingBlocks;
 
 namespace Chapter02
 {
     public class C02E05_JekyllHydeV1
     {
-        private const string DEST = @"C:\Projects2\iTextBuildingBlocks\results\chapter02\jekyll_hyde_v1.pdf";
-        private const string SRC = @"C:\Projects2\iTextBuildingBlocks\resources\txt\jekyll_hyde.txt";
+        private static readonly string SRC = $@"{Paths.TextResourcesPath}\jekyll_hyde.txt";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter02\jekyll_hyde_v1.pdf";
 
         public static void Main(string[] args)
         {

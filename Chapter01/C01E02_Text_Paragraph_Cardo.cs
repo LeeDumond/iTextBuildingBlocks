@@ -1,19 +1,19 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using iText.Kernel.Font;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
+using iTextBuildingBlocks;
 
 namespace Chapter01
 {
     public class C01E02_Text_Paragraph_Cardo
     {
-        private const string DEST = @"C:\Projects2\iTextBuildingBlocks\results\chapter01\text_paragraph_cardo.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter01\text_paragraph_cardo.pdf";
 
-        private const string REGULAR = @"C:\Projects2\iTextBuildingBlocks\resources\fonts\Cardo-Regular.ttf";
-        private const string BOLD = @"C:\Projects2\iTextBuildingBlocks\resources\fonts\Cardo-Bold.ttf";
-        private const string ITALIC = @"C:\Projects2\iTextBuildingBlocks\resources\fonts\Cardo-Italic.ttf";
+        private static readonly string REGULAR = $@"{Paths.FontResourcesPath}\Cardo-Regular.ttf";
+        private static readonly string BOLD = $@"{Paths.FontResourcesPath}\Cardo-Bold.ttf";
+        private static readonly string ITALIC = $@"{Paths.FontResourcesPath}\Cardo-Italic.ttf";
 
         public static void Main(string[] args)
         {

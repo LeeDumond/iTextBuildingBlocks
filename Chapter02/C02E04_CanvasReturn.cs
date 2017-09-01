@@ -7,12 +7,13 @@ using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Canvas;
 using iText.Layout;
 using iText.Layout.Element;
+using iTextBuildingBlocks;
 
 namespace Chapter02
 {
     public class C02E04_CanvasReturn
     {
-        private const string DEST = @"C:\Projects2\iTextBuildingBlocks\results\chapter02\canvas_return.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter02\canvas_return.pdf";
 
         public static void Main(string[] args)
         {

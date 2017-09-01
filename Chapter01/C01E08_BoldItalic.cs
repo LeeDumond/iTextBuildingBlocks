@@ -2,12 +2,13 @@
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
+using iTextBuildingBlocks;
 
 namespace Chapter01
 {
     public class C01E08_BoldItalic
     {
-        private const string DEST = @"C:\Projects2\iTextBuildingBlocks\results\chapter01\bold_italic.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter01\bold_italic.pdf";
 
         public static void Main(string[] args)
         {

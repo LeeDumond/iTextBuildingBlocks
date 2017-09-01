@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Chapter01")]
+[assembly: AssemblyTitle("iTextBuildingBlocks")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("STATE OF ILLINOIS")]
-[assembly: AssemblyProduct("Chapter01")]
+[assembly: AssemblyProduct("iTextBuildingBlocks")]
 [assembly: AssemblyCopyright("Copyright © STATE OF ILLINOIS 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f18570de-b22e-4ec7-b4e5-aa1bea9e7cc4")]
+[assembly: Guid("f5b69095-d5c8-4385-b2cc-64f616ebb8a9")]
 
 // Version information for an assembly consists of the following four values:
 //

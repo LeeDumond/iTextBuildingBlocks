@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter02.C02E06_JekyllHydeV3</StartupObject>
+    <StartupObject>Chapter02.C02E04_CanvasReturn</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -78,6 +78,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iTextBuildingBlocks\iTextBuildingBlocks.csproj">
+      <Project>{F5B69095-D5C8-4385-B2CC-64F616EBB8A9}</Project>
+      <Name>iTextBuildingBlocks</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

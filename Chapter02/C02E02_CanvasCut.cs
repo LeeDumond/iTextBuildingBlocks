@@ -6,12 +6,13 @@ using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Canvas;
 using iText.Layout;
 using iText.Layout.Element;
+using iTextBuildingBlocks;
 
 namespace Chapter02
 {
     public class C02E02_CanvasCut
     {
-        private const string DEST = @"C:\Projects2\iTextBuildingBlocks\results\chapter02\canvas_cut.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter02\canvas_cut.pdf";
 
         public static void Main(string[] args)
         {
