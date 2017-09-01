@@ -70,9 +70,9 @@
     <Compile Include="C02E02_CanvasCut.cs" />
     <Compile Include="C02E03_CanvasRepeat.cs" />
     <Compile Include="C02E04_CanvasReturn.cs" />
-    <Compile Include="C02E07_JekyllHydeV6.cs" />
-    <Compile Include="C02E07_JekyllHydeV5.cs" />
-    <Compile Include="C02E07_JekyllHydeV4.cs" />
+    <Compile Include="C02E10_JekyllHydeV6.cs" />
+    <Compile Include="C02E09_JekyllHydeV5.cs" />
+    <Compile Include="C02E08_JekyllHydeV4.cs" />
     <Compile Include="C02E07_JekyllHydeV3.cs" />
     <Compile Include="C02E06_JekyllHydeV2.cs" />
     <Compile Include="C02E05_JekyllHydeV1.cs" />

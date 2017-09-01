@@ -10,7 +10,7 @@ using iTextBuildingBlocks;
 
 namespace Chapter02
 {
-    public class C02E06_JekyllHydeV3
+    public class C02E07_JekyllHydeV3
     {
         private static readonly string SRC = $@"{Paths.TextResourcesPath}\jekyll_hyde.txt";
         private static readonly string DEST = $@"{Paths.ResultsPath}\chapter02\jekyll_hyde_v3.pdf";
