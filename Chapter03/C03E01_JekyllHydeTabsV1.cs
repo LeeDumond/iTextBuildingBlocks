@@ -1,5 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using iText.Kernel.Geom;
+using iText.Kernel.Pdf;
+using iText.Kernel.Pdf.Canvas;
+using iText.Layout;
+using iText.Layout.Element;
 using iTextBuildingBlocks;
 
 namespace Chapter03
@@ -22,7 +28,34 @@ namespace Chapter03
 
         private static void CreatePdf(string dest)
         {
-            throw new NotImplementedException();
+            PdfDocument pdf = new PdfDocument(new PdfWriter(dest));
+            Document document = new Document(pdf, PageSize.A4.Rotate());
+
+            PdfCanvas pdfCanvas = new PdfCanvas(pdf.AddNewPage());
+            for (int i = 1; i <= 10; i++)
+            {
+                pdfCanvas.MoveTo(document.GetLeftMargin() + i * 50, 0);
+                pdfCanvas.LineTo(document.GetLeftMargin() + i * 50, 595);
+            }
+            pdfCanvas.Stroke();
+
+            List<List<String>> resultSet = CsvTo2DList.Convert(SRC, "|");
+
+            foreach (List<string> record in resultSet)
+            {
+                Paragraph p = new Paragraph();
+
+                p.Add(record[0].Trim()).Add(new Tab());
+                p.Add(record[1].Trim()).Add(new Tab());
+                p.Add(record[2].Trim()).Add(new Tab());
+                p.Add(record[3].Trim()).Add(new Tab());
+                p.Add(record[4].Trim()).Add(new Tab());
+                p.Add(record[5].Trim()).Add(new Tab());
+
+                document.Add(p);
+            }
+            
+            document.Close();
         }
     }
 }
