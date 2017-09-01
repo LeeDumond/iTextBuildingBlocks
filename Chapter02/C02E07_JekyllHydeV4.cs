@@ -53,9 +53,8 @@ namespace Chapter02
 
             document
                 .SetTextAlignment(TextAlignment.JUSTIFIED)
-                .SetHyphenation(new HyphenationConfig("en", "uk", 3, 3))
                 .SetFont(font)
-                .SetFontSize(11);
+                .SetHyphenation(new HyphenationConfig("en", "uk", 3, 3));                
 
             StreamReader sr = File.OpenText(SRC);
             string line;

@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter02.C02E06_JekyllHydeV5</StartupObject>
+    <StartupObject>Chapter02.C02E06_JekyllHydeV6</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -70,6 +70,7 @@
     <Compile Include="C02E02_CanvasCut.cs" />
     <Compile Include="C02E03_CanvasRepeat.cs" />
     <Compile Include="C02E04_CanvasReturn.cs" />
+    <Compile Include="C02E07_JekyllHydeV6.cs" />
     <Compile Include="C02E07_JekyllHydeV5.cs" />
     <Compile Include="C02E07_JekyllHydeV4.cs" />
     <Compile Include="C02E07_JekyllHydeV3.cs" />

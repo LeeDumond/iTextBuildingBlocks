@@ -7,14 +7,15 @@ using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Hyphenation;
 using iText.Layout.Properties;
+using iText.Layout.Renderer;
 using iTextBuildingBlocks;
 
 namespace Chapter02
 {
-    public class C02E06_JekyllHydeV5
+    public class C02E06_JekyllHydeV6
     {
         private static readonly string SRC = $@"{Paths.TextResourcesPath}\jekyll_hyde.txt";
-        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter02\jekyll_hyde_v5.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter02\jekyll_hyde_v6.pdf";
 
         public static void Main(string[] args)
         {
@@ -35,6 +36,15 @@ namespace Chapter02
             //Initialize document
             Document document = new Document(pdf);
 
+            Paragraph p = new Paragraph()
+                .Add("Be prepared to read a story about a London lawyer "
+                     + "named Gabriel John Utterson who investigates strange "
+                     + "occurrences between his old friend, Dr. Henry Jekyll, "
+                     + "and the evil Edward Hyde.");
+
+            document.Add(p);
+            document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
+
             //Set column parameters
             float offSet = 36;
             float gutter = 23;
@@ -47,6 +57,7 @@ namespace Chapter02
                 new Rectangle(offSet + columnWidth + gutter, offSet, columnWidth, columnHeight)};
 
             document.SetRenderer(new ColumnDocumentRenderer(document, columns));
+            document.Add(new AreaBreak(AreaBreakType.LAST_PAGE));
 
             PdfFont font = PdfFontFactory.CreateFont(FontConstants.TIMES_ROMAN);
             PdfFont bold = PdfFontFactory.CreateFont(FontConstants.HELVETICA_BOLD);
@@ -54,13 +65,12 @@ namespace Chapter02
             document
                 .SetTextAlignment(TextAlignment.JUSTIFIED)
                 .SetFont(font)
-                .SetHyphenation(new HyphenationConfig("en", "uk", 3, 3));
-                
+                .SetHyphenation(new HyphenationConfig("en", "uk", 3, 3));                
+
             StreamReader sr = File.OpenText(SRC);
             string line;
-            Paragraph p;
             bool title = true;
-            AreaBreak nextPage = new AreaBreak(AreaBreakType.NEXT_PAGE);
+            AreaBreak nextArea = new AreaBreak(AreaBreakType.NEXT_AREA);
 
             while ((line = sr.ReadLine()) != null)
             {
@@ -79,12 +89,22 @@ namespace Chapter02
 
                 if (string.IsNullOrWhiteSpace(line))
                 {
-                    document.Add(nextPage);
+                    document.Add(nextArea);
                     title = true;
                 }
 
                 document.Add(p);
             }
+
+            document.Add(new AreaBreak(AreaBreakType.NEXT_PAGE));
+            document.SetRenderer(new DocumentRenderer(document));
+            document.Add(new AreaBreak(AreaBreakType.LAST_PAGE));
+            p = new Paragraph()
+                .Add("This was the story about the London lawyer "
+                     + "named Gabriel John Utterson who investigates strange "
+                     + "occurrences between his old friend, Dr. Henry Jekyll, "
+                     + "and the evil Edward Hyde. THE END!");
+            document.Add(p);
 
             //Close document
             document.Close();
