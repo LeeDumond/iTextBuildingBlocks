@@ -13,5 +13,11 @@ namespace iTextBuildingBlocks
 
         public static string TextResourcesPath =>
             Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../resources/txt"));
+
+        public static string ImageResourcesPath =>
+            Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../resources/img"));
+
+        public static string DataResourcesPath =>
+            Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../resources/txt"));
     }
 }
