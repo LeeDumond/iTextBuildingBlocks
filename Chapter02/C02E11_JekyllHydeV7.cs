@@ -15,7 +15,7 @@ using iTextBuildingBlocks;
 
 namespace Chapter02
 {
-    public class C02E11_JekylHydeV7
+    public class C02E11_JekyllHydeV7
     {
         private static readonly string SRC = $@"{Paths.TextResourcesPath}\jekyll_hyde.txt";
         private static readonly string DEST = $@"{Paths.ResultsPath}\chapter02\jekyll_hyde_v7.pdf";
@@ -61,7 +61,7 @@ namespace Chapter02
                 .SetHyphenation(new HyphenationConfig("en", "uk", 3, 3));
 
             StreamReader sr = File.OpenText(SRC);
-            String line;
+            string line;
             Paragraph p;
             bool title = true;
             AreaBreak nextPage = new AreaBreak(AreaBreakType.NEXT_PAGE);
