@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter03.C03E08_MaryReillyV2</StartupObject>
+    <StartupObject>Chapter03.C03E08_MaryReillyV6</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -73,6 +73,10 @@
     <Compile Include="C03E05_JekyllHydeTabsV5.cs" />
     <Compile Include="C03E06_JekyllHydeTabsV6.cs" />
     <Compile Include="C03E07_TextExample.cs" />
+    <Compile Include="C03E08_MaryReillyV6.cs" />
+    <Compile Include="C03E08_MaryReillyV5.cs" />
+    <Compile Include="C03E08_MaryReillyV4.cs" />
+    <Compile Include="C03E08_MaryReillyV3.cs" />
     <Compile Include="C03E08_MaryReillyV2.cs" />
     <Compile Include="C03E08_MaryReillyV1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
