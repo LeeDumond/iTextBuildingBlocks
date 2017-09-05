@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter03.C03E05_JekyllHydeTabsV5</StartupObject>
+    <StartupObject>Chapter03.C03E06_JekyllHydeTabsV6</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -71,6 +71,7 @@
     <Compile Include="C03E03_JekyllHydeTabsV3.cs" />
     <Compile Include="C03E04_JekyllHydeTabsV4.cs" />
     <Compile Include="C03E05_JekyllHydeTabsV5.cs" />
+    <Compile Include="C03E06_JekyllHydeTabsV6.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
