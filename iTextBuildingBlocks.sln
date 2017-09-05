@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTextBuildingBlocks", "iTex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter03", "Chapter03\Chapter03.csproj", "{253F0668-AF92-4F86-B9D0-26AB5EB9722D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter04", "Chapter04\Chapter04.csproj", "{93669ABA-1FAB-4D1B-8A08-A149879051CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{253F0668-AF92-4F86-B9D0-26AB5EB9722D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{253F0668-AF92-4F86-B9D0-26AB5EB9722D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{253F0668-AF92-4F86-B9D0-26AB5EB9722D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93669ABA-1FAB-4D1B-8A08-A149879051CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93669ABA-1FAB-4D1B-8A08-A149879051CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93669ABA-1FAB-4D1B-8A08-A149879051CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93669ABA-1FAB-4D1B-8A08-A149879051CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
