@@ -7,7 +7,7 @@ using iTextBuildingBlocks;
 
 namespace Chapter03
 {
-    public class C03E08_MaryReillyV3
+    public class C03E10_MaryReillyV3
     {
         private static readonly string MARY = $@"{Paths.ImageResourcesPath}\0117002.jpg";
         private static readonly string DEST = $@"{Paths.ResultsPath}\chapter03\mary_reilly_V3.pdf";

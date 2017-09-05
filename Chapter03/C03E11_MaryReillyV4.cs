@@ -3,15 +3,14 @@ using iText.IO.Image;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
-using iText.Layout.Properties;
 using iTextBuildingBlocks;
 
 namespace Chapter03
 {
-    public class C03E08_MaryReillyV6
+    public class C03E11_MaryReillyV4
     {
         private static readonly string MARY = $@"{Paths.ImageResourcesPath}\0117002.jpg";
-        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter03\mary_reilly_V6.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter03\mary_reilly_V4.pdf";
 
         public static void Main(string[] args)
         {
@@ -33,8 +32,7 @@ namespace Chapter03
                 "Mary Reilly is a maid in the household of Dr. Jekyll: ");
             document.Add(p);
 
-            Image img = new Image(ImageDataFactory.Create(MARY));
-            img.SetFixedPosition(2, 320, 750, UnitValue.CreatePointValue(50));
+            Image img = new Image(ImageDataFactory.Create(MARY), 320, 750, 50);
             document.Add(img);            
 
             document.Close();

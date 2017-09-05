@@ -8,10 +8,11 @@ using iTextBuildingBlocks;
 
 namespace Chapter03
 {
-    public class C03E08_MaryReillyV5
+    public class C03E14_MaryReillyV7
     {
+        private static readonly string SRC = $@"{Paths.PdfResourcesPath}\jekyll_hyde.pdf";
         private static readonly string MARY = $@"{Paths.ImageResourcesPath}\0117002.jpg";
-        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter03\mary_reilly_V5.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter03\mary_reilly_V7.pdf";
 
         public static void Main(string[] args)
         {
@@ -21,21 +22,20 @@ namespace Chapter03
                 file.Directory.Create();
             }
 
-            CreatePdf(DEST);
+            ManipulatePdf(SRC, DEST);
         }
 
-        private static void CreatePdf(string dest)
+        private static void ManipulatePdf(string src, string dest)
         {
-            PdfDocument pdf = new PdfDocument(new PdfWriter(dest));
-            Document document = new Document(pdf);
+            PdfReader reader = new PdfReader(src);
+            PdfWriter writer = new PdfWriter(dest);
+            PdfDocument pdfDoc = new PdfDocument(reader, writer);
 
-            Paragraph p = new Paragraph(
-                "Mary Reilly is a maid in the household of Dr. Jekyll: ");
-            document.Add(p);
+            Document document = new Document(pdfDoc);
 
             Image img = new Image(ImageDataFactory.Create(MARY));
-            img.SetFixedPosition(320, 750, UnitValue.CreatePointValue(50));
-            document.Add(img);            
+            img.SetFixedPosition(1, 350, 750, UnitValue.CreatePointValue(50));
+            document.Add(img);
 
             document.Close();
         }
