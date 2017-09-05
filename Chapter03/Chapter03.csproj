@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter03.C03E18_ImageTypes</StartupObject>
+    <StartupObject>Chapter03.C03E19_PagedImages</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -85,6 +85,7 @@
     <Compile Include="C03E08_MaryReillyV1.cs" />
     <Compile Include="C03E14_MaryReillyV7.cs" />
     <Compile Include="C03E18_ImageTypes.cs" />
+    <Compile Include="C03E19_PagedImages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
