@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using iText.Kernel.Geom;
@@ -10,10 +11,10 @@ using iTextBuildingBlocks;
 
 namespace Chapter03
 {
-    public class C03E01_JekyllHydeTabsV1
+    public class C03E02_JekyllHydeTabsV2
     {
         private static readonly string SRC = $@"{Paths.DataResourcesPath}\jekyll_hyde.csv";
-        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter03\jekyll_hyde_tabs1.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter03\jekyll_hyde_tabs2.pdf";
 
         public static void Main(string[] args)
         {
@@ -31,19 +32,26 @@ namespace Chapter03
             PdfDocument pdf = new PdfDocument(new PdfWriter(dest));
             Document document = new Document(pdf, PageSize.A4.Rotate());
 
+            float[] stops = { 80f, 120f, 430f, 640f, 720f };
+
+            List<TabStop> tabstops = new List<TabStop>();
+
             PdfCanvas pdfCanvas = new PdfCanvas(pdf.AddNewPage());
-            for (int i = 1; i <= 10; i++)
+            for (int i = 0; i < stops.Length; i++)
             {
-                pdfCanvas.MoveTo(document.GetLeftMargin() + i * 50, 0);
-                pdfCanvas.LineTo(document.GetLeftMargin() + i * 50, 595);
+                tabstops.Add(new TabStop(stops[i]));
+                pdfCanvas.MoveTo(document.GetLeftMargin() + stops[i], 0);
+                pdfCanvas.LineTo(document.GetLeftMargin() + stops[i], 595);
             }
             pdfCanvas.Stroke();
 
             List<List<String>> resultSet = CsvTo2DList.Convert(SRC, "|");
 
-            foreach (List<string> record in resultSet)
+            foreach (List<String> record in resultSet)
             {
                 Paragraph p = new Paragraph();
+
+                p.AddTabStops(tabstops);
 
                 p.Add(record[0].Trim()).Add(new Tab())
                     .Add(record[1].Trim()).Add(new Tab())
