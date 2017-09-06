@@ -1,4 +1,7 @@
 ﻿using System.IO;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
 using iTextBuildingBlocks;
 
 namespace Chapter05
@@ -20,7 +23,23 @@ namespace Chapter05
 
         private static void CreatePdf(string dest)
         {
-            throw new System.NotImplementedException();
+            //Initialize PDF document
+            PdfDocument pdf = new PdfDocument(new PdfWriter(dest));
+
+            // Initialize document
+            Document document = new Document(pdf);
+
+            Table table = new Table(3);
+            table.AddCell(new Cell(1, 3).Add("Cell with colspan 3"));
+            table.AddCell(new Cell(2, 1).Add("Cell with rowspan 2"));
+            table.AddCell("row 1; cell 1");
+            table.AddCell("row 1; cell 2");
+            table.AddCell("row 2; cell 1");
+            table.AddCell("row 2; cell 2");
+
+            document.Add(table);
+
+            document.Close();
         }
     }
 }
