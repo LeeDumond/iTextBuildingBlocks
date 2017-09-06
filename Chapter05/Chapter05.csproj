@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Chapter05.C05E02_ColumnWidths</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\itext7.7.0.4\lib\net40\itext.barcodes.dll</HintPath>
@@ -63,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C05E02_ColumnWidths.cs" />
     <Compile Include="C05E01_MyFirstTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
