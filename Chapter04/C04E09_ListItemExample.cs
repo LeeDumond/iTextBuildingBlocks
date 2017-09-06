@@ -5,16 +5,16 @@ using iText.IO.Image;
 using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Action;
 using iText.Layout;
-using iText.Layout.Borders;
 using iText.Layout.Element;
+using iText.Layout.Properties;
 using iTextBuildingBlocks;
 
 namespace Chapter04
 {
-    public class C04E01_DivExample1
+    public class C04E09_ListItemExample
     {
         private static readonly string SRC = $@"{Paths.DataResourcesPath}\jekyll_hyde.csv";
-        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter04\jekyll_hyde_overviewV1.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter04\jekyll_hyde_overviewV4.pdf";
 
         public static void Main(string[] args)
         {
@@ -35,17 +35,17 @@ namespace Chapter04
             List<List<string>> resultSet = CsvTo2DList.Convert(SRC, "|");
             resultSet.RemoveAt(0);
 
+            List list = new List(ListNumberingType.DECIMAL);
+
             foreach (List<string> record in resultSet)
             {
-                Div div = new Div()
-                    .SetBorderLeft(new SolidBorder(2))
-                    .SetPaddingLeft(3)
-                    .SetMarginBottom(10);
+                ListItem li = new ListItem();
+                li.SetKeepTogether(true);
 
                 string url = $"http://www.imdb.com/title/tt{record[0]}";
                 Link movie = new Link(record[2], PdfAction.CreateURI(url));
 
-                div.Add(new Paragraph(movie.SetFontSize(14)))
+                li.Add(new Paragraph(movie.SetFontSize(14)))
                     .Add(new Paragraph($"Directed by {record[3]} ({record[4]}, {record[1]})"));
 
                 FileInfo file = new FileInfo($@"{Paths.ImageResourcesPath}\{record[0]}.jpg");
@@ -54,10 +54,13 @@ namespace Chapter04
                 {
                     Image img = new Image(ImageDataFactory.Create(file.FullName));
                     img.ScaleToFit(10000, 120);
-                    div.Add(img);
+                    li.Add(img);
                 }
-                document.Add(div);
+
+                list.Add(li);
             }
+
+            document.Add(list);
 
             document.Close();
         }

@@ -11,10 +11,10 @@ using iTextBuildingBlocks;
 
 namespace Chapter04
 {
-    public class C04E01_DivExample1
+    public class C04E02_DivExample2
     {
         private static readonly string SRC = $@"{Paths.DataResourcesPath}\jekyll_hyde.csv";
-        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter04\jekyll_hyde_overviewV1.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter04\jekyll_hyde_overviewV2.pdf";
 
         public static void Main(string[] args)
         {
@@ -38,6 +38,7 @@ namespace Chapter04
             foreach (List<string> record in resultSet)
             {
                 Div div = new Div()
+                    .SetKeepTogether(true)
                     .SetBorderLeft(new SolidBorder(2))
                     .SetPaddingLeft(3)
                     .SetMarginBottom(10);

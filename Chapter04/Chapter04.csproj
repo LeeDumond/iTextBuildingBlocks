@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Chapter04.C04E10_NestedLists</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\itext7.7.0.4\lib\net40\itext.barcodes.dll</HintPath>
@@ -63,7 +66,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C04E03_LineSeperatorExample.cs" />
+    <Compile Include="C04E02_DivExample2.cs" />
     <Compile Include="C04E01_DivExample1.cs" />
+    <Compile Include="C04E04_ParagraphAndDiv1.cs" />
+    <Compile Include="C04E05_ParagraphAndDiv3.cs" />
+    <Compile Include="C04E05_ParagraphAndDiv2.cs" />
+    <Compile Include="C04E06_CustomParagraph.cs" />
+    <Compile Include="C04E07_ListTypes.cs" />
+    <Compile Include="C04E08_CustomListSymbols.cs" />
+    <Compile Include="C04E09_ListItemExample.cs" />
+    <Compile Include="C04E10_NestedLists.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

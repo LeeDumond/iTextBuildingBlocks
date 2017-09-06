@@ -39,7 +39,7 @@ namespace Chapter03
             }
             pdfCanvas.Stroke();
 
-            List<List<String>> resultSet = CsvTo2DList.Convert(SRC, "|");
+            List<List<string>> resultSet = CsvTo2DList.Convert(SRC, "|");
 
             foreach (List<string> record in resultSet)
             {
