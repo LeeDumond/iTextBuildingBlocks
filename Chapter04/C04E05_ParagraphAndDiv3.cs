@@ -40,7 +40,7 @@ namespace Chapter04
                 .SetHyphenation(new HyphenationConfig("en", "uk", 3, 3));
 
             StreamReader sr = File.OpenText(SRC);
-            String line;
+            string line;
             Div div = new Div();
 
             while ((line = sr.ReadLine()) != null)
