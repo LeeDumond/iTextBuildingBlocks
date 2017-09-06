@@ -43,7 +43,7 @@ namespace Chapter02
                 .SetFontSize(11);
 
             StreamReader sr = File.OpenText(SRC);
-            String line;
+            string line;
             Paragraph p;
             bool title = true;
             while ((line = sr.ReadLine()) != null)
