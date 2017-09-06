@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter05.C05E05_CellMarginPadding</StartupObject>
+    <StartupObject>Chapter05.C05E06_CellBorders</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -71,6 +71,7 @@
     <Compile Include="C05E03_CellAlignment.cs" />
     <Compile Include="C05E04_ColumnHeights.cs" />
     <Compile Include="C05E05_CellMarginPadding.cs" />
+    <Compile Include="C05E06_CellBorders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
