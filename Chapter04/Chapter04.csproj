@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter04.C04E03_LineSeperatorExample</StartupObject>
+    <StartupObject>Chapter04.C04E05_ParagraphAndDiv3</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -69,6 +69,9 @@
     <Compile Include="C04E03_LineSeperatorExample.cs" />
     <Compile Include="C04E02_DivExample2.cs" />
     <Compile Include="C04E01_DivExample1.cs" />
+    <Compile Include="C04E04_ParagraphAndDiv1.cs" />
+    <Compile Include="C04E05_ParagraphAndDiv3.cs" />
+    <Compile Include="C04E05_ParagraphAndDiv2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
