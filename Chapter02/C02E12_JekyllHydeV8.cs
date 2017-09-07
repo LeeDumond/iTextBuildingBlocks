@@ -22,7 +22,7 @@ private static readonly string DEST = $@"{Paths.ResultsPath}\chapter02\jekyll_hy
         public static void Main(string[] args)
         {
             FileInfo file = new FileInfo(DEST);
-            if (file.Directory != null && !file.Directory.Exists)
+            if (!file.Directory.Exists)
             {
                 file.Directory.Create();
             }

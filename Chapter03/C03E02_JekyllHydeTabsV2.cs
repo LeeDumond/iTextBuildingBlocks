@@ -19,7 +19,7 @@ namespace Chapter03
         public static void Main(string[] args)
         {
             var file = new FileInfo(DEST);
-            if (file.Directory != null && !file.Directory.Exists)
+            if (!file.Directory.Exists)
             {
                 file.Directory.Create();
             }
