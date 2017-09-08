@@ -14,10 +14,10 @@ namespace Chapter06
 {
     public class C06E10_TOC_OutlinesNames
     {
-private static readonly string SRC = $@"{Paths.TextResourcesPath}\jekyll_hyde.txt";
+        private static readonly string SRC = $@"{Paths.TextResourcesPath}\jekyll_hyde.txt";
         private static readonly string DEST = $@"{Paths.ResultsPath}\chapter06\jekyll_hyde_outline1.pdf";
 
-public static void Main(string[] args)
+        public static void Main(string[] args)
         {
             FileInfo file = new FileInfo(DEST);
             if (!file.Directory.Exists)
