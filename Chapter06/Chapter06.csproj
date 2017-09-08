@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter06.C06E02_NamedAction</StartupObject>
+    <StartupObject>Chapter06.C06E04_TOC_GoToNamed</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -68,6 +68,8 @@
   <ItemGroup>
     <Compile Include="C06E02_NamedAction.cs" />
     <Compile Include="C06E01_URIAction.cs" />
+    <Compile Include="C06E03_TOC_GoToPage.cs" />
+    <Compile Include="C06E04_TOC_GoToNamed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
