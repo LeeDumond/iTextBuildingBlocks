@@ -39,16 +39,16 @@ namespace Chapter05
             Table table = new Table(new float[] { 3, 2, 14, 9, 4, 3 });
             table.SetWidthPercent(100);
 
-            List<List<String>> resultSet = CsvTo2DList.Convert(SRC, "|");
-            List<String> header = resultSet[0];
+            List<List<string>> resultSet = CsvTo2DList.Convert(SRC, "|");
+            List<string> header = resultSet[0];
             resultSet.RemoveAt(0);
 
-            foreach (String field in header)
+            foreach (string field in header)
             {
                 table.AddHeaderCell(field);
             }
 
-            foreach (List<String> record in resultSet)
+            foreach (List<string> record in resultSet)
             {
                 table.AddCell(record[0]);
                 table.AddCell(record[1]);

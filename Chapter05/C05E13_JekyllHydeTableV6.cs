@@ -36,8 +36,8 @@ namespace Chapter05
             // Initialize document
             Document document = new Document(pdf, PageSize.A4.Rotate());
 
-            List<List<String>> resultSet = CsvTo2DList.Convert(SRC, "|");
-            List<String> header = resultSet[0];
+            List<List<string>> resultSet = CsvTo2DList.Convert(SRC, "|");
+            List<string> header = resultSet[0];
             resultSet.RemoveAt(0);
 
             Table table = new Table(new float[] { 3, 2, 14, 9, 4, 3 });
@@ -46,13 +46,13 @@ namespace Chapter05
                 table, new Table.RowRange(0, nRows - 1)));
             table.SetWidthPercent(100);
 
-            foreach (String field in header)
+            foreach (string field in header)
             {
                 table.AddHeaderCell(field);
             }
-            foreach (List<String> record in resultSet)
+            foreach (List<string> record in resultSet)
             {
-                foreach (String field in record)
+                foreach (string field in record)
                 {
                     table.AddCell(field);
                 }
