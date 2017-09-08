@@ -75,6 +75,7 @@
     <Compile Include="C06E06_JavaScript.cs" />
     <Compile Include="C06E08_ExplicitDestinations.cs" />
     <Compile Include="C06E09_Annotation.cs" />
+    <Compile Include="C06E10_TOC_OutlinesNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
