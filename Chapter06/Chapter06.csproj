@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter06.C06E05_RemoteGoto</StartupObject>
+    <StartupObject>Chapter06.C06E07_ChainedActions</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -71,6 +71,8 @@
     <Compile Include="C06E03_TOC_GoToPage.cs" />
     <Compile Include="C06E04_TOC_GoToNamed.cs" />
     <Compile Include="C06E05_RemoteGoto.cs" />
+    <Compile Include="C06E07_ChainedActions.cs" />
+    <Compile Include="C06E06_JavaScript.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
