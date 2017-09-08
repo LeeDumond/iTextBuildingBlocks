@@ -21,7 +21,7 @@ namespace Chapter06
     public class C06E04_TOC_GoToNamed
     {
         private static readonly string SRC = $@"{Paths.TextResourcesPath}\jekyll_hyde.txt";
-        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter06\jekyll_hyde_toc2.pdf";
+        internal static readonly string DEST = $@"{Paths.ResultsPath}\chapter06\jekyll_hyde_toc2.pdf";
 
         public static void Main(string[] args)
         {
