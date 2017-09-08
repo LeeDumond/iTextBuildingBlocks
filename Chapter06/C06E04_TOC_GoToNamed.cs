@@ -49,7 +49,7 @@ namespace Chapter06
                 .SetFontSize(11);
 
             StreamReader sr = File.OpenText(SRC);
-            String line;
+            string line;
             Paragraph p;
             bool title = true;
             int counter = 0;
@@ -63,7 +63,7 @@ namespace Chapter06
                 if (title)
                 {
                     string name = $"title{counter++:D2}";
-                    KeyValuePair<String, int> titlePage = new KeyValuePair<string, int>(line, pdf.GetNumberOfPages());
+                    KeyValuePair<string, int> titlePage = new KeyValuePair<string, int>(line, pdf.GetNumberOfPages());
 
                     p.SetFont(bold).SetFontSize(12)
                         .SetKeepWithNext(true)

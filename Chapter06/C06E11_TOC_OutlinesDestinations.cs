@@ -2,20 +2,22 @@
 using System.IO;
 using iText.IO.Font;
 using iText.Kernel.Font;
+using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Navigation;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Hyphenation;
 using iText.Layout.Properties;
+using iText.Layout.Renderer;
 using iTextBuildingBlocks;
 
 namespace Chapter06
 {
-    public class C06E10_TOC_OutlinesNames
+    public class C06E11_TOC_OutlinesDestinations
     {
         private static readonly string SRC = $@"{Paths.TextResourcesPath}\jekyll_hyde.txt";
-        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter06\jekyll_hyde_outline1.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter06\jekyll_hyde_outline2.pdf";
 
         public static void Main(string[] args)
         {
@@ -59,7 +61,7 @@ namespace Chapter06
                 if (title)
                 {
                     string name = $"title{counter++:D2}";
-                    outline = CreateOutline(outline, pdf, line, name);
+                    outline = CreateOutline(outline, pdf, line, p);
                     p.SetFont(bold).SetFontSize(12)
                         .SetKeepWithNext(true)
                         .SetDestination(name);
@@ -87,21 +89,44 @@ namespace Chapter06
             document.Close();
         }
 
-        private static PdfOutline CreateOutline(PdfOutline outline, PdfDocument pdf, string title, string name)
+        private static PdfOutline CreateOutline(PdfOutline outline, PdfDocument pdf, string title, Paragraph p)
         {
             if (outline == null)
             {
                 outline = pdf.GetOutlines(false);
                 outline = outline.AddOutline(title);
-                outline.AddDestination(PdfDestination.MakeDestination(new PdfString(name)));
 
                 return outline;
             }
 
-            PdfOutline kid = outline.AddOutline(title);
-            kid.AddDestination(PdfDestination.MakeDestination(new PdfString(name)));
-
+            OutlineRenderer renderer = new OutlineRenderer(p, title, outline);
+            p.SetNextRenderer(renderer);
             return outline;
+
+        }
+
+        private class OutlineRenderer : ParagraphRenderer
+        {
+            private readonly PdfOutline parentOutline;
+            private readonly string title;
+
+            public OutlineRenderer(Paragraph modelElement, string title, PdfOutline parent) : base(modelElement)
+            {
+                this.title = title;
+                this.parentOutline = parent;
+            }
+
+            public override void Draw(DrawContext drawContext)
+            {
+                base.Draw(drawContext);
+
+                Rectangle rect = GetOccupiedAreaBBox();
+                PdfDestination dest = PdfExplicitDestination.CreateXYZ(drawContext.GetDocument().GetLastPage(),
+                    rect.GetLeft(), rect.GetTop(), 0);
+
+                PdfOutline outline = parentOutline.AddOutline(title);
+                outline.AddDestination(dest);
+            }
         }
     }
 }

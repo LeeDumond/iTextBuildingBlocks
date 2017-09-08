@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter06.C06E10_TOC_OutlinesNames</StartupObject>
+    <StartupObject>Chapter06.C06E11_TOC_OutlinesDestinations</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -75,6 +75,7 @@
     <Compile Include="C06E06_JavaScript.cs" />
     <Compile Include="C06E08_ExplicitDestinations.cs" />
     <Compile Include="C06E09_Annotation.cs" />
+    <Compile Include="C06E11_TOC_OutlinesDestinations.cs" />
     <Compile Include="C06E10_TOC_OutlinesNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
