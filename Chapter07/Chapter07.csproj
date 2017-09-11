@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter07.C07E02_TextWatermark</StartupObject>
+    <StartupObject>Chapter07.C07E03_PageXofY</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="C07E01_EventHandlers.cs" />
     <Compile Include="C07E02_TextWatermark.cs" />
+    <Compile Include="C07E03_PageXofY.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
