@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Chapter07.C07E08_FullScreen</StartupObject>
+    <StartupObject>Chapter07.C07E09_ViewerPreferences</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="itext.barcodes, Version=7.0.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
@@ -74,6 +74,7 @@
     <Compile Include="C07E07_PageLayoutPageMode.cs" />
     <Compile Include="C07E06_PageLabels.cs" />
     <Compile Include="C07E08_FullScreen.cs" />
+    <Compile Include="C07E09_ViewerPreferences.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
