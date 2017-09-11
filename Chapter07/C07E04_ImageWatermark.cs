@@ -52,7 +52,7 @@ namespace Chapter07
                 .SetHyphenation(new HyphenationConfig("en", "uk", 3, 3));
 
             StreamReader sr = File.OpenText(SRC);
-            String line;
+            string line;
             Paragraph p;
             bool title = true;
             int counter = 0;
