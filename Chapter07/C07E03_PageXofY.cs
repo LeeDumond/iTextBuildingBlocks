@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using iText.IO.Font;
 using iText.Kernel.Events;
 using iText.Kernel.Font;
@@ -152,7 +151,5 @@ namespace Chapter07
                 canvas.ShowTextAligned(pdf.GetNumberOfPages().ToString(), 0, descent, TextAlignment.LEFT);
             }
         }
-
-        
     }
 }

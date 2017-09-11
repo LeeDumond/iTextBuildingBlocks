@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using iText.Kernel.Colors;
 using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Action;
-using iText.Layout.Element;
 using iTextBuildingBlocks;
 
 namespace Chapter06

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using iText.Kernel.Geom;
 using iText.Kernel.Pdf;

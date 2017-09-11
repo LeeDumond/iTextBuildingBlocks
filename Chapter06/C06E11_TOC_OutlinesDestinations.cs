@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using iText.IO.Font;
 using iText.Kernel.Font;
 using iText.Kernel.Geom;
@@ -113,7 +112,7 @@ namespace Chapter06
             public OutlineRenderer(Paragraph modelElement, string title, PdfOutline parent) : base(modelElement)
             {
                 this.title = title;
-                this.parentOutline = parent;
+                parentOutline = parent;
             }
 
             public override void Draw(DrawContext drawContext)

@@ -11,7 +11,7 @@ namespace Chapter07
     {
         private static readonly string DEST = $@"{Paths.ResultsPath}\chapter07\fullscreen.pdf";
 
-public static void Main(string[] args)
+        public static void Main(string[] args)
         {
             FileInfo file = new FileInfo(DEST);
             if (!file.Directory.Exists)

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using iText.IO.Image;
 using iText.IO.Source;
-using iText.IO.Util;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;

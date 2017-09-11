@@ -60,7 +60,7 @@ namespace Chapter07
 
             public void SetRotation(PdfNumber orientation)
             {
-                this.rotation = orientation;
+                rotation = orientation;
             }
 
             public void HandleEvent(Event @event)

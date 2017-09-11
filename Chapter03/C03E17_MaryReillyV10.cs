@@ -4,7 +4,6 @@ using iText.IO.Image;
 using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
-using iText.Layout.Properties;
 using iTextBuildingBlocks;
 
 namespace Chapter03

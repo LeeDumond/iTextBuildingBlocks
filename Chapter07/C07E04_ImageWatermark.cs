@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using iText.IO.Font;
@@ -98,8 +96,10 @@ namespace Chapter07
 
             string firstKey = toc.Select(t => t.Key).First();
             toc.Remove(firstKey);
-            List<TabStop> tabstops = new List<TabStop>();
-            tabstops.Add(new TabStop(580, TabAlignment.RIGHT, new DottedLine()));
+            List<TabStop> tabstops = new List<TabStop>
+            {
+                new TabStop(580, TabAlignment.RIGHT, new DottedLine())
+            };
             foreach (KeyValuePair<string, KeyValuePair<string, int>> entry in toc)
             {
                 KeyValuePair<string, int> text = entry.Value;
@@ -118,8 +118,8 @@ namespace Chapter07
 
         private class TransparentImage : IEventHandler
         {
-            protected PdfExtGState gState;
-            protected Image img;
+            private readonly PdfExtGState gState;
+            private readonly Image img;
 
             public TransparentImage(Image img)
             {

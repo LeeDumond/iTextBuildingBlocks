@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using iText.IO.Font;
 using iText.Kernel.Colors;
 using iText.Kernel.Events;
@@ -78,8 +77,9 @@ namespace Chapter07
 
         private class TextWatermark : IEventHandler
         {
-            Color lime, blue;
-            PdfFont helvetica;
+            private readonly Color lime;
+            private readonly Color blue;
+            private readonly PdfFont helvetica;
 
             public TextWatermark()
             {
@@ -101,7 +101,8 @@ namespace Chapter07
                     .Rectangle(pageSize.GetLeft(), pageSize.GetBottom(),
                         pageSize.GetWidth(), pageSize.GetHeight())
                     .Fill().RestoreState();
-                if (pageNumber > 1) {
+                if (pageNumber > 1)
+                {
                     pdfCanvas.BeginText()
                         .SetFontAndSize(helvetica, 10)
                         .MoveText(pageSize.GetWidth() / 2 - 120, pageSize.GetTop() - 20)

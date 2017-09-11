@@ -66,7 +66,7 @@ namespace Chapter02
             public override void AddChild(IRenderer renderer)
             {
                 base.AddChild(renderer);
-                _full = this.GetPropertyAsBoolean(Property.FULL).Equals(true);
+                _full = GetPropertyAsBoolean(Property.FULL).Equals(true);
             }
 
             public bool IsFull()

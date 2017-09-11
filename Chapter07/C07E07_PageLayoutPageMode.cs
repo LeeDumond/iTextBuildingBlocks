@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using iText.IO.Font;
@@ -38,7 +36,8 @@ namespace Chapter07
             pdf.GetCatalog().SetPageLayout(PdfName.TwoColumnRight);
             pdf.GetCatalog().SetPageMode(PdfName.UseThumbs);
             PdfPage page = pdf.AddNewPage();
-            page.SetPageLabel((PageLabelNumberingStyleConstants?)PageLabelNumberingStyleConstants.LOWERCASE_ROMAN_NUMERALS, null);          
+            page.SetPageLabel(
+                (PageLabelNumberingStyleConstants?) PageLabelNumberingStyleConstants.LOWERCASE_ROMAN_NUMERALS, null);
 
             Document document = new Document(pdf);
             document.Add(new Paragraph().Add("Page left blank intentionally"));
@@ -48,7 +47,8 @@ namespace Chapter07
             document.Add(new Paragraph().Add("Page left blank intentionally"));
             document.Add(new AreaBreak());
             page = pdf.GetLastPage();
-            page.SetPageLabel((PageLabelNumberingStyleConstants?)PageLabelNumberingStyleConstants.DECIMAL_ARABIC_NUMERALS, null, 1);
+            page.SetPageLabel(
+                (PageLabelNumberingStyleConstants?) PageLabelNumberingStyleConstants.DECIMAL_ARABIC_NUMERALS, null, 1);
             PdfFont font = PdfFontFactory.CreateFont(FontConstants.TIMES_ROMAN);
             PdfFont bold = PdfFontFactory.CreateFont(FontConstants.HELVETICA_BOLD);
             document.SetTextAlignment(TextAlignment.JUSTIFIED)
@@ -104,8 +104,7 @@ namespace Chapter07
 
             string firstKey = toc.Select(t => t.Key).First();
             toc.Remove(firstKey);
-            List<TabStop> tabstops = new List<TabStop>();
-            tabstops.Add(new TabStop(580, TabAlignment.RIGHT, new DottedLine()));
+            List<TabStop> tabstops = new List<TabStop> {new TabStop(580, TabAlignment.RIGHT, new DottedLine())};
             foreach (KeyValuePair<string, KeyValuePair<string, int>> entry in toc)
             {
                 KeyValuePair<string, int> text = entry.Value;
