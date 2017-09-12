@@ -33,20 +33,22 @@ namespace Chapter03
             Document document = new Document(pdf, PageSize.A4.Rotate());
 
             float[] stops = { 40, 580, 590, 720 };
-            List<TabStop> tabstops = new List<TabStop>();
-            tabstops.Add(new TabStop(stops[0], TabAlignment.LEFT));
-            tabstops.Add(new TabStop(stops[1], TabAlignment.RIGHT));
-            tabstops.Add(new TabStop(stops[2], TabAlignment.LEFT));
+            List<TabStop> tabstops = new List<TabStop>
+            {
+                new TabStop(stops[0], TabAlignment.LEFT),
+                new TabStop(stops[1], TabAlignment.RIGHT),
+                new TabStop(stops[2], TabAlignment.LEFT)
+            };
 
             TabStop anchor = new TabStop(stops[3], TabAlignment.ANCHOR);
             anchor.SetTabAnchor(' ');
             tabstops.Add(anchor);
 
             PdfCanvas pdfCanvas = new PdfCanvas(pdf.AddNewPage());
-            for (int i = 0; i < stops.Length; i++)
+            foreach (float stop in stops)
             {
-                pdfCanvas.MoveTo(document.GetLeftMargin() + stops[i], 0);
-                pdfCanvas.LineTo(document.GetLeftMargin() + stops[i], 595);
+                pdfCanvas.MoveTo(document.GetLeftMargin() + stop, 0);
+                pdfCanvas.LineTo(document.GetLeftMargin() + stop, 595);
             }
             pdfCanvas.Stroke();
 

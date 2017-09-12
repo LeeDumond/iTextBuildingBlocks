@@ -13,7 +13,7 @@ namespace Chapter06
 {
     public class C06E09_Annotation
     {
-private static readonly string DEST = $@"{Paths.ResultsPath}\chapter06\jekyll_hyde_annotation.pdf";
+        private static readonly string DEST = $@"{Paths.ResultsPath}\chapter06\jekyll_hyde_annotation.pdf";
 
         public static void Main(string[] args)
         {
@@ -39,7 +39,7 @@ private static readonly string DEST = $@"{Paths.ResultsPath}\chapter06\jekyll_hy
                 .SetAction(js)
                 .SetBorderStyle(PdfAnnotation.STYLE_UNDERLINE);
 
-            Link link1 = new Link("here", (PdfLinkAnnotation)la1);
+            Link link1 = new Link("here", (PdfLinkAnnotation) la1);
 
             document.Add(new Paragraph()
                 .Add("Click ")
@@ -51,7 +51,7 @@ private static readonly string DEST = $@"{Paths.ResultsPath}\chapter06\jekyll_hy
                 .SetHighlightMode(PdfAnnotation.HIGHLIGHT_PUSH)
                 .SetBorderStyle(PdfAnnotation.STYLE_INSET);
 
-            Link link2 = new Link("next page", (PdfLinkAnnotation)la2);
+            Link link2 = new Link("next page", (PdfLinkAnnotation) la2);
 
             document.Add(new Paragraph()
                 .Add("Go to the ")

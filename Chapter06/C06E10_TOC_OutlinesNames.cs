@@ -46,14 +46,13 @@ namespace Chapter06
 
             StreamReader sr = File.OpenText(SRC);
             string line;
-            Paragraph p;
             bool title = true;
             int counter = 0;
             PdfOutline outline = null;
 
             while ((line = sr.ReadLine()) != null)
             {
-                p = new Paragraph(line);
+                Paragraph p = new Paragraph(line);
                 p.SetKeepTogether(true);
                 if (title)
                 {

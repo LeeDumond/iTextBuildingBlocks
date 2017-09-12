@@ -35,7 +35,8 @@ namespace Chapter05
             // Initialize document
             Document document = new Document(pdf);
 
-            Table table = new Table(1);
+            Table table = new Table(new[] {1f});
+            table.SetWidthPercent(100);
 
             table.AddCell(p);
 

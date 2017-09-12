@@ -29,7 +29,7 @@ namespace Chapter05
             // Initialize document
             Document document = new Document(pdf);
 
-            Table table = new Table(3);
+            Table table = new Table(new []{1f,1f,1f});
             table.AddCell(new Cell(1, 3).Add("Cell with colspan 3"));
             table.AddCell(new Cell(2, 1).Add("Cell with rowspan 2"));
             table.AddCell("row 1; cell 1");

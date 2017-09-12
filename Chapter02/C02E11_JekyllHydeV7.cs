@@ -61,12 +61,11 @@ namespace Chapter02
 
             StreamReader sr = File.OpenText(SRC);
             string line;
-            Paragraph p;
             bool title = true;
             AreaBreak nextPage = new AreaBreak(AreaBreakType.NEXT_PAGE);
             while ((line = sr.ReadLine()) != null)
             {
-                p = new Paragraph(line);
+                Paragraph p = new Paragraph(line);
                 if (title)
                 {
                     p.SetFont(bold).SetFontSize(12);
@@ -101,7 +100,7 @@ namespace Chapter02
 
             protected override LayoutArea UpdateCurrentArea(LayoutResult overflowResult)
             {
-                if (overflowResult != null && overflowResult.GetAreaBreak() != null &&
+                if (overflowResult?.GetAreaBreak() != null && 
                     overflowResult.GetAreaBreak().GetAreaType() != AreaBreakType.NEXT_AREA)
                 {
                     _nextAreaNumber = 0;

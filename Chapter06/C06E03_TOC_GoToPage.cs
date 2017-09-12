@@ -94,8 +94,7 @@ namespace Chapter06
             string firstKey = toc.Select(d => d.Key).First();
             toc.Remove(firstKey);
 
-            List<TabStop> tabstops = new List<TabStop>();
-            tabstops.Add(new TabStop(580, TabAlignment.RIGHT, new DottedLine()));
+            List<TabStop> tabstops = new List<TabStop> {new TabStop(580, TabAlignment.RIGHT, new DottedLine())};
             foreach (KeyValuePair<string, int> entry in toc)
             {
                 p = new Paragraph()
@@ -106,7 +105,7 @@ namespace Chapter06
                     .SetAction(PdfAction.CreateGoTo(PdfExplicitDestination.CreateFit(entry.Value)));
 
                 document.Add(p);
-            }            
+            }
 
             //Close document
             document.Close();

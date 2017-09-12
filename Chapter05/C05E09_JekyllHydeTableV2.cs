@@ -50,7 +50,7 @@ namespace Chapter05
                 }
             }
 
-            Table outerTable = new Table(1)
+            Table outerTable = new Table(new []{1f})
                 .AddHeaderCell("Continued from previous page:")
                 .SetSkipFirstHeader(true)
                 .AddCell(new Cell().Add(table).SetPadding(0));

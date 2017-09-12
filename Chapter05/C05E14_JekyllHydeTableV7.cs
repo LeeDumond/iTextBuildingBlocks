@@ -70,14 +70,7 @@ namespace Chapter05
 
             public RunlengthRenderer(Cell modelElement, string duration) : base(modelElement)
             {
-                if (string.IsNullOrWhiteSpace(duration))
-                {
-                    runlength = 0;
-                }
-                else
-                {
-                    runlength = int.Parse(duration);;
-                }
+                runlength = string.IsNullOrWhiteSpace(duration) ? 0 : int.Parse(duration);
             }
 
             public override IRenderer GetNextRenderer()

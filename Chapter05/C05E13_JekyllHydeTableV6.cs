@@ -70,7 +70,7 @@ namespace Chapter05
             {
             }
 
-            public AlternatingBackgroundTableRenderer(Table modelElement) : base(modelElement)
+            private AlternatingBackgroundTableRenderer(Table modelElement) : base(modelElement)
             {
             }
 

@@ -29,7 +29,7 @@ namespace Chapter06
             Document document = new Document(pdf);
 
             PdfAction action = PdfAction.CreateJavaScript("app.alert('Boo!');");
-            action.Next(PdfAction.CreateGoToR(new FileInfo(C06E04_TOC_GoToNamed.DEST).FullName,1, true ));
+            action.Next(PdfAction.CreateGoToR(new FileInfo(C06E04_TOC_GoToNamed.DEST).FullName, 1, true));
 
             Link link = new Link("here", action);
 

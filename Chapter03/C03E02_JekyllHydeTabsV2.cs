@@ -35,11 +35,11 @@ namespace Chapter03
             List<TabStop> tabstops = new List<TabStop>();
 
             PdfCanvas pdfCanvas = new PdfCanvas(pdf.AddNewPage());
-            for (int i = 0; i < stops.Length; i++)
+            foreach (float stop in stops)
             {
-                tabstops.Add(new TabStop(stops[i]));
-                pdfCanvas.MoveTo(document.GetLeftMargin() + stops[i], 0);
-                pdfCanvas.LineTo(document.GetLeftMargin() + stops[i], 595);
+                tabstops.Add(new TabStop(stop));
+                pdfCanvas.MoveTo(document.GetLeftMargin() + stop, 0);
+                pdfCanvas.LineTo(document.GetLeftMargin() + stop, 595);
             }
             pdfCanvas.Stroke();
 

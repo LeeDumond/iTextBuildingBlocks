@@ -31,14 +31,14 @@ private static readonly string DEST = $@"{Paths.ResultsPath}\chapter05\nested_ta
             // Initialize document
             Document document = new Document(pdf);
 
-            Table table = new Table(2);
+            Table table = new Table(new []{1f, 1f});
             table.SetWidthPercent(80);
             table.SetHorizontalAlignment(HorizontalAlignment.CENTER);
 
             table.AddCell(new Cell(1, 2).Add("Cell with colspan 2"));
             table.AddCell(new Cell().Add("Cell with rowspan 1"));
 
-            Table inner = new Table(2);
+            Table inner = new Table(new[] { 1f, 1f });
             inner.AddCell("row 1; cell 1");
             inner.AddCell("row 1; cell 2");
             inner.AddCell("row 2; cell 1");
@@ -48,7 +48,7 @@ private static readonly string DEST = $@"{Paths.ResultsPath}\chapter05\nested_ta
 
             document.Add(table);
 
-            table = new Table(2);
+            table = new Table(new[] { 1f, 1f });
             table.SetMarginTop(10);
             table.SetWidthPercent(80);
             table.SetHorizontalAlignment(HorizontalAlignment.CENTER);
@@ -56,7 +56,7 @@ private static readonly string DEST = $@"{Paths.ResultsPath}\chapter05\nested_ta
             table.AddCell(new Cell(1, 2).Add("Cell with colspan 2"));
             table.AddCell(new Cell().Add("Cell with rowspan 1"));
 
-            inner = new Table(2);
+            inner = new Table(new[] { 1f, 1f });
             inner.AddCell("row 1; cell 1");
             inner.AddCell("row 1; cell 2");
             inner.AddCell("row 2; cell 1");

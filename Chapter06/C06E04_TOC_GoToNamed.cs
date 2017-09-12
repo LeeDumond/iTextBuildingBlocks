@@ -97,8 +97,7 @@ namespace Chapter06
             string firstKey = toc.Select(d => d.Key).First();
             toc.Remove(firstKey);
 
-            List<TabStop> tabstops = new List<TabStop>();
-            tabstops.Add(new TabStop(580, TabAlignment.RIGHT, new DottedLine()));
+            List<TabStop> tabstops = new List<TabStop> {new TabStop(580, TabAlignment.RIGHT, new DottedLine())};
 
             foreach (KeyValuePair<string, KeyValuePair<string, int>> entry in toc)
             {

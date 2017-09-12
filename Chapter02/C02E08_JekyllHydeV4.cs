@@ -58,13 +58,12 @@ namespace Chapter02
 
             StreamReader sr = File.OpenText(SRC);
             string line;
-            Paragraph p;
             bool title = true;
             AreaBreak nextArea = new AreaBreak(AreaBreakType.NEXT_AREA);
 
             while ((line = sr.ReadLine()) != null)
             {
-                p = new Paragraph(line);
+                Paragraph p = new Paragraph(line);
                 p.SetKeepTogether(true);
 
                 if (title)

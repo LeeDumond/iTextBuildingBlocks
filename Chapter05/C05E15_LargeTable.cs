@@ -29,7 +29,7 @@ namespace Chapter05
             // Initialize document
             Document document = new Document(pdf);
 
-            Table table = new Table(3, true);
+            Table table = new Table(new[] {1f, 1f, 1f}, true);
 
             table.AddHeaderCell("Table header 1");
             table.AddHeaderCell("Table header 2");
@@ -48,7 +48,7 @@ namespace Chapter05
 
                 if (i % 50 == 0)
                 {
-                    table.Flush();;
+                    table.Flush();
                 }
             }
 

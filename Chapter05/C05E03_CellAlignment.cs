@@ -59,7 +59,7 @@ namespace Chapter05
 
             document.Add(table);
 
-            document.Close();;
+            document.Close();
         }
     }
 }
